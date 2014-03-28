@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom -->
+	<link href="css/custom.css" rel="stylesheet">  
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+<meta charset="UTF-8"/>
+</head>
+<body class="white-bg">
+	<div class="header container">
+		
+		<a href="#" class="logo"><img src="css/images/logo.png"/><span>Community</span></a>
+		<ul class="ul-b">
+			
+			<li><a class="youtube-link social-links" href="http://www.youtube.com/user/wavemakersoftwaresf"></a></li>
+			<li><a class="twitter-link social-links" href="https://twitter.com/WaveMakerDev"></a></li>
+			<li><a class="facebook-link social-links" href="https://www.facebook.com/wavemakersoftware"></a></li>
+			
+		</ul>
+		<ul class="ul-a">
+			<li><a href="/wiki/bin/wmdoc/">Documentation</a></li>
+			<li><a href="/forums/">Forum</a></li>
+			<li><a href="/blog">Blog</a></li>
+		</ul>
+
+		
+	</div>
+	<div class="banner banner-a" style="background:url('css/images/dev-home-banner.png') no-repeat center center">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-6 banner-home">
+					<h1>WaveMaker Studio 7</h1>
+					<h2>Coming soon!</h2>
+					<!-- <a href="#" class="btn-green">Try it now</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main-content container" style="padding:0px;">
+		<div class="row">
+			<div class="col-sm-8 home-left">
+				<div class="hl-section-a">
+					<img class="start-image" src="css/images/dev-portal.png" />
+					<h2 class="h1-a">Join the WaveMaker community</h2>
+					<h2 class="h1-b">Share your knowledge</h2>
+					<a href="http://dev.wavemaker.com/forums/?q=user/register" class="btn-green-big">Get Involved</a>
+					<i></i>
+				</div>
+				<div class="hl-section-b">
+					<div class="row">
+						<div class="col-sm-6 hsb-left">
+							<img class="monitor-img" src="css/images/monitor.png" />
+						</div>
+						<div class="col-sm-6">
+							<h2 class="h1-c">Get the latest </h2>
+							<h2 class="h1-d">WaveMaker Studio </h2>
+							<h2 class="h1-c">for your computer</h2>
+							<a target="_blank" href="http://www.wavemaker.com/downloads/" class="btn-a-big">Download WaveMaker 6.7</a>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-sm-4 home-right">
+				<h2 class="hr-a">Latest from the community</h2>
+				<div class="hr-section-a">
+					<h2 class="hr-b">March 6, 2014</h2>
+					<h2 class="hr-c"><a target="_blank" href="/blog/2014/03/06/wavemaker-websites-upgrade/">WaveMaker Websites Upgrade</a></h2>
+					<h2 class="hr-d">-- vevekp @ 1:41 am</h2>
+				</div>
+				<div class="hr-section-a">
+					<h2 class="hr-b">February 28, 2014</h2>
+					<h2 class="hr-c"><a  target="_blank" href="/blog/2014/02/28/wavemaker-updates-the-new-year-so-far/">WaveMaker Updates – The New Year so far</a></h2>
+					<h2 class="hr-d">-- vevekp @ 2:16 am </h2>
+				</div>
+				<div class="hr-section-a">
+					<h2 class="hr-b">February 25, 2014</h2>
+					<h2 class="hr-c"><a target="_blank"  href="/blog/2014/02/25/announcing-the-release-of-wavemaker-6-7-0/">Announcing the release of WaveMaker 6.7.0</a></h2>
+					<h2 class="hr-d">-- vevekp @ 5:45 am</h2>
+				</div>
+				<div class="hr-section-a">
+					<h2 class="hr-b">February 4, 2014</h2>
+					<h2 class="hr-c"><a target="_blank"  href="/blog/2014/02/04/wavemaker-forum-service-disruption/">WaveMaker Forum – Service Disruption</a></h2>
+					<h2 class="hr-d">-- vevekp @ 2:47 am </h2>
+				</div>							
+				<div class="hr-section-a">
+					<h2 class="hr-e"><a target="_blank"  href="/blog">READ MORE</a></h2>
+				</div>
+
+			</div>
+		</div>
+		<div class="mc-contact">
+			<div class="row">
+				<div class="col-sm-4">
+					<!-- <img class="certificate-img" src="css/images/certificate.png" /> -->
+					<img class="bug-img" src="css/images/bug.png" />
+					<h2 class="hr-f"> Is that a bug? <br />Look it up here
+					</h2>
+					<a target="_blank" href="http://jira.wavemaker.com/secure/BrowseProjects.jspa" class="btn-a-big">REPORT BUGS</a>
+				</div>
+				<div class="col-sm-4">
+					<img class="training-support-img" src="css/images/training-support.png" />
+					<h2 class="hr-f"> Need training, 
+						support or services 
+						for WaveMaker?
+					</h2>
+					<a target="_blank" href="http://www.wavemaker.com/services/" class="btn-a-big">LET US HELP YOU</a>
+				</div>
+				<div class="col-sm-4">
+					<!-- <a href="http://jira.wavemaker.com/">
+						<img class="bug-img" src="css/images/bug.png" />
+						<h2 class="hr-f"> View and 
+							Report Bugs
+						</h2>
+					</a> -->
+					<div class="subs-box">
+						<h2 class="hr-f">
+							Subscribe to alerts and news
+						</h2>
+						<form action="http://feedburner.google.com/fb/a/mailverify">
+							<input type="hidden" name="uri" value="WavemakerDevBlog" />
+							<input type="hidden" name="loc" value="en_US" />
+							<div class="input-group">
+
+								<input type="text" class="form-control" placeholder="Enter email" name="email" />
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="submit">SUBSCRIBE</button>
+								</span>
+
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+
+	</div>
+
+
+<div class="mc-demo">
+<div class="container">
+			<h1>Screencasts and Demos <a target="_blank" href="http://www.youtube.com/user/wavemakersoftwaresf" class="btn-a">More Videos</a> </h1>
+			<div class="row">
+				<div class="col-sm-3">
+					<h2>Screencasts</h2>
+					<div style="background:#e2e8f0;height:150px;">
+						<iframe src="//www.youtube.com/embed/x3OcrLdh23o" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<p>Using Prefabs to leverage Facebook APIs
+					</p>
+				</div>
+				<div class="col-sm-3">
+					<h2>&nbsp;</h2>
+					<div style="background:#e2e8f0;height:150px;">						
+						<iframe frameborder="0" src="//www.youtube.com/embed/QVBzYle0L40" frameborder="0" allowfullscreen ></iframe>
+					</div>
+					<p>Using Prefabs to leverage eBay APIs
+					</p>
+				</div>
+				<div class="col-sm-3">
+					<h2>Demos</h2>
+					<a target="_blank" href="http://invoicewave.wavemaker.com/invoicewave/index.html">
+						<div style="background:url(/css/images/demo1.png) no-repeat;height:150px; background-size:contain;">						
+						</div>
+					</a>
+					<p>InvoiceWave
+					</p>
+				</div>
+				<div class="col-sm-3">
+					<h2>&nbsp;</h2>
+					<a target="_blank" href="http://showcase.wavemaker.com/ShowCase/">
+						<div style="background:url(/css/images/demo2.png) no-repeat;height:150px; background-size:contain;">						
+						</div>
+					</a>
+					<p>WaveMaker Application Gallery
+					</p>
+				</div>
+			</div>
+		</div>
+</div>
+
+	<div class="footer">
+		<div class="footer-top">                        
+			<a href="http://www.wavemaker.com/about/">About Us</a>
+			<a href="http://www.wavemaker.com/services/">Support & Services</a>
+			<a href="/blog/">Blog</a>
+			<a href="http://www.wavemaker.com/">WaveMaker Home</a>
+			<a href="http://www.wavemaker.com/about/contact/">Contact Us</a>
+		</div>
+
+		<div class="footer-bottom">
+			<div class="fb-a">
+			</div>
+			<h3>&copy; 2004-2014 WaveMaker, Inc</h3>
+		</div>
+	</div>
+
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>

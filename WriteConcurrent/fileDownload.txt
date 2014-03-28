@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="./images/favicon.ico">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="open,source,cipher,chat,shay,concepts,andrew,software,developer,java,web,design,comics,comic,web comics,comic downloader,Comic Downloader,imgur,gallery,galleries,album,albums,downloader,imgurgallerydownloader,imgurgalleryalbumdownloader,imgurgallery&albumdownloader,download,imgur album downloader,imgur gallery downloader">
+	<meta name="description" content="Official site for shayConcepts">
+	<meta name="robots" content="all">
+	
+	<script src="./lightbox/js/jquery-1.7.2.min.js"></script>
+	<script src="./lightbox/js/lightbox.js"></script>
+	<link href="./lightbox/css/lightbox.css" rel="stylesheet" />
+	
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<!--
+	<link rel="stylesheet" type="text/css" href="./stylem.css">	-->
+
+	<title> shayConcepts : Home </title>
+</head>
+<body>
+<div id="master">
+	<div id="top">
+		<div id="top-inner">
+			<div id="top-left">
+				<a id="logo-link" href="/index.php"><img id="logo" alt="shayConcepts" src="./images/logo.png" /></a>
+			</div> <!-- top-left-->
+			<div id="top-right">
+				<ul id="nav-ul">
+					<li class="nav-li" id="home-hover"> <a class="nav-link" href="/index.php">Home</a></li>
+					<li class="nav-li"> <img class="nav-divider" alt="navdivider" src="./images/navdivider.png" /> </li>
+					<li class="nav-li" id="software-hover"> <a class="nav-link" href="/software.php">Software</a></li>
+					<li class="nav-li"> <img class="nav-divider" alt="navdivider" src="./images/navdivider.png" /> </li>
+					<li class="nav-li" id="web-hover"> <a class="nav-link" href="/webdesign.php">Web</a></li>
+					<li class="nav-li"> <img class="nav-divider" alt="navdivider" src="./images/navdivider.png" /> </li>
+					<li class="nav-li" id="blog-hover"> <a class="nav-link" href="/wordpress/">Blog</a></li>
+					<li class="nav-li"> <img class="nav-divider" alt="navdivider" src="./images/navdivider.png" /> </li>
+					<li class="nav-li" id="software-hover"> <a class="nav-link" href="/contact.php">Contact</a></li>
+				</ul>
+			</div> <!--top-right-->			
+		</div> <!--top-inner-->
+		<div class="clear">
+		</div>
+	</div> <!--top-->
+		<div id="middle-wrap">
+		<div id="display-wrap">
+			<div id="left-blue-bar">
+			</div>
+			<a href="/software.php#cipherclient"><img style="border:0;" alt="" class="rotate" src="./images/rotate-image-left.png" /></a>
+			<a href="/software.php#imgur"><img style="border:0;" class="rotate" alt="" src="./images/rotate-image-right.png" /></a>
+			<div id="right-blue-bar">
+			</div>			
+		</div><!--display-wrap-->
+		<div class="clear">
+		</div>
+		<div class="content-wrap">
+			<div class="left-content">
+				<a class="header-link" href="/index.php"><img class="header-img" alt="shayConcepts" src="./images/shaydesigns.png" /></a>
+				<a class="header-link-m" href="/index.php">shayConcepts</a>
+				<div class="content-text">
+					My name is Andrew Shay. I am a software and web developer. You can view my showcase of software and websites that I have created. You can also <a class="intextlink" href="/contact.php">contact me</a> if you are in need of a website or custom software.
+				</div>
+			</div><!--left content-->
+			<div class="right-content">
+				<img alt="shayConcepts" class="rightimage" src="./images/right-sd.png" />
+			</div>
+		</div><!--content-wrap-->
+		<div class="clear">
+		</div>
+		<div class="content-wrap">
+			<div class="left-content">
+				<a class="header-link" href="/software.php"><img class="header-img" alt="Software" src="/images/software.png" /></a>
+				<a class="header-link-m" href="/software.php">Software</a>
+				<div class="content-text">
+					I am primarily a Java developer so most of my software is developed with Java. Some of my software is also open source so that anyone can build from it.
+				</div>
+			</div><!--left content-->
+			<div class="right-content">
+				<a class="rightlink" href="/software.php"><img alt="Programming" class="rightimage" src="./images/right-programming.png" /></a>
+			</div>
+		</div><!--content-wrap-->
+		<div class="clear">
+		</div>
+		<div class="content-wrap">
+			<div class="left-content">
+				<a class="header-link" href="/webdesign.php"><img class="header-img" alt="Web Design" src="./images/webdesign.png" /></a>
+				<a class="header-link-m" href="/webdesign.php">Web Design</a>
+				<div class="content-text">
+					I have been creating websites on and off for about 6 years.  I mockup the website in Photoshop then code it in Notepad++. My websites are created with HTML5, CSS3 and PHP. Some of my sites also include mobile versions.
+				</div>
+			</div><!--left content-->
+			<div class="right-content">
+				<a class="rightlink" href="/webdesign.php"><img class="rightimage" alt="Web Design" src="./images/right-webdesign.png" /></a>
+			</div>
+		</div><!--content-wrap-->
+		<div class="clear">
+		</div>
+		<div class="clear">
+		</div>
+		<div class="content-wrap">
+			<div class="left-content">
+				<a class="header-link" href="/wordpress/"><img class="header-img" alt="Blog" src="./images/blog.png" /></a>
+				<a class="header-link-m" href="/wordpress/">Blog</a>
+				<div class="content-text">
+					Check out my blog to keep up to date with what I am doing.
+				</div>
+			</div><!--left content-->
+			<div class="right-content">
+				<a class="rightlink" href="/wordpress/"><img alt="Blog" class="rightimage" src="./images/right-blog.png" /></a>
+			</div>
+		</div><!--content-wrap-->
+		<div class="clear">
+		</div>
+	</div><!-- middle-wrap -->
+	<div id="push">
+	</div>	
+</div> <!-- master -->
+<div id="footer">
+	<div id="footer-text">
+		shayConcepts <br />
+		site created by Andrew Shay <br />
+		<a id="footerlink" href="/contact.php">Contact</a>
+		<!--010101000110100001100001011011100110101101110011001000000110011001101111011100100010000001110110011010010111001101101001011101000110100101101110011001110010000001110011011010000110000101111001010000110110111101101110011000110110010101110000011101000111001100101110011000110110111101101101-->
+	</div>
+	<div style="display:none;">
+		<img src="/images/home-hover.png">
+		<img src="/images/web-hover.png">
+		<img src="/images/software-hover.png">
+		<img src="/images/firefoxthemes-hover.png">
+		<img src="/images/blog-hover.png">
+	</div>
+</div><!-- footer --></body>
+</html>
