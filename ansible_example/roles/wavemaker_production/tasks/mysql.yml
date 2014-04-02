@@ -1,0 +1,31 @@
+# Gets  the wavemaker DataBase SQL Dump in the .sql format
+- name: Prod Server Step 2 | Copy Dump to Db
+  mysql_db: state=dump name={{ prod_db_name }} login_password={{ prod_db_password }} login_user={{ prod_db_username }} target='{{ prod_sql_path }}'
+  tags: wavemaker_production
+
+
+
+#Retreives the Wavemaker MySql Dump from the Production Machine to Controller Machine and places in the path location corresponding to var local_staging_filepath
+- name: Local Server Step 2 | Get the MySQL DB Dump from Productin
+  local_action: shell cd {{ local_staging_filepath }} && rm -rf *.sql* && wget {{ prod_sql_url }}
+  sudo: False
+  tags: wavemaker_production
+
+
+  # Checks for wether the MySQL Dump for the wavemaker documentation exists or NOT ,If exists than is removed from the location specified by local_staging_sqlfile
+- name: Local Server Step 6 | Verify whether dbdbump.sql file exists
+  stat: path={{ local_staging_sqlfile }}
+  register: check_sql_path
+  sudo: False
+  tags: wavemaker_production
+
+- name: Production Server Step 4 | Delete the existing dbdump.sql file
+  shell: sudo rm -rf {{ prod_sql_path }}
+  when: check_sql_path|success
+  tags: wavemaker_production
+
+- name: Local Server Step 7 | /home/pramati/wmrepotest.zip not exists
+  debug: msg='wavemakerdocs.sql not exists in wavemaker_staging/staging/files folder'
+  when: check_sql_path|failed
+  tags: wavemaker_production
+

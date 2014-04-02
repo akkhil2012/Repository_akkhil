@@ -1,0 +1,45 @@
+- name: sep9 Copy the wavemakerdocs code base to ec2 node
+  copy: src={{ prod_zip_filename }}  dest={{ apache_home_path }}
+  tags: wavemaker_staging
+
+- name: Verify whether /var/www/wmrepo folder exists
+  stat: path={{ wordpress_home_path }}
+  register: check_folder_path
+  sudo: False
+  tags: wavemaker_staging
+# Deletes the existing codebase in the Staging Machine and places the wavemaker Documentation code base into the apache home path 
+- name: Delete existing old wmrepo folder before extracting the latest production zip folder
+  shell: cd {{ apache_home_path }} && sudo rm -rf '{{ wordpress_foldername }}/'
+  when: check_folder_path|success
+  tags: wavemaker_staging
+
+- name: Extract the Zip file
+  shell: cd {{ apache_home_path }} && unzip {{ prod_zip_filename }}
+  tags: wavemaker_staging
+
+- name: Verify whether /var/www/wmrepo/ folder exists
+  debug: msg='wmrepo folder exists'
+  when: check_folder_path|success
+  tags: wavemaker_staging
+
+- name: Verify whether /var/www/wmrepo/ folder exists
+  shell: cd {{ apache_home_path }} && sudo rm -rf {{ prod_zip_filename }}
+  when: check_folder_path|success
+  tags: wavemaker_staging
+
+- name: Verify whether /var/www/wmrepo folder NOT exists
+  debug: msg='/var/www/wmrepo folder not exists'
+  when: check_folder_path|failed 
+  tags: wavemaker_staging
+
+- name: configure wp-config.php with ec2 hostname
+  template: src={{ wordpress_configfile }} dest={{ wordpress_home_path }} mode=0644
+  tags: wavemaker_staging
+
+- name: Change OwnerShip for the wp-content folder
+  command: chown -R www-data:www-data '{{ wordpress_home_path }}wp-content'
+  tags: wavemaker_staging
+# read/ write permissions to be granted to all the users so as to be able to write/uploads to the site
+- name: Change permissions for the wp-content folder
+  command: chmod -R 777 '{{ wordpress_home_path }}wp-content'
+  tags: wavemaker_staging

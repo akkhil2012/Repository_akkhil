@@ -1,0 +1,30 @@
+# Staging Variables
+accelerate: true 
+apache_home_path: /var/www/
+wordpress_foldername: wmrepo
+apache_virtualhost: 000-default
+max_connectionsmax_connections:
+newsudouser: wavemakerdocs
+data_packet_size: 128MB
+
+wordpress_home_path: '{{ apache_home_path}}{{ wordpress_foldername}}/'
+apache_virtualhost_dest_path: /etc/apache2/sites-enabled/{{ apache_virtualhost }}
+
+production_hostname: wavemakerdocs.pramati.com
+#mysql_dbname: wordpress
+#mysql_username: admin
+#mysql_user_password: admin123
+mysql_dump_sql: wavemakerdocs.sql
+mysql_port: 3306
+
+mysql_dump_dest_path: '{{ apache_home_path }}{{ mysql_dump_sql }}'
+
+#wordpress section
+
+prod_zip_filename: wmrepotest.zip
+wordpress_configfile: wp-config.php
+
+wp_db_name: wavemakerdocs
+wp_db_user: mysql
+wp_db_password: mysql
+

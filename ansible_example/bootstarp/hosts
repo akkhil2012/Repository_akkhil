@@ -1,0 +1,2 @@
+172.16.10.186 ansible_connection=ssh ansible_ssh_user=pramati ansible_ssh_pass=pramati123
+ec2-54-184-120-175.us-west-2.compute.amazonaws.com

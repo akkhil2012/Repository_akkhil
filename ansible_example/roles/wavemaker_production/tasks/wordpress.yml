@@ -1,0 +1,40 @@
+# Get
+
+# Compresses the wavemaker documentation codebase from the production machine in .zip format excluding the backups of the wordpress taken on daily basis
+
+
+- name: Prod Server Step 1 | Zip wmrepo code
+  shell: cd {{ prod_home_path }}  && sudo zip -r {{ prod_zip_filename }} {{  prod_dir_path }}  -x 'wmrepo/wp-content/backupwordpress-*' 'wmrepo/index.html'
+  sudo: true
+  tags: wavemaker_production
+
+#Retreives the wavemaker codebase from production and places in the path location corresponding to var local_staging_filepath
+- name: Local Server Step 1 | Retrieve wordpress codebase from Production server
+  local_action:  shell cd {{ local_staging_filepath }} && rm -rf *.zip* && scp {{ sudouser }}@{{ prod_ip }}:{{ prod_code_zip_path }} {{ local_staging_filepath }}
+  sudo: False
+  tags: wavemaker_production
+
+
+#Looks for the wordpress documentation codebase at a location defined by var local_staging_codezippath,if not than throws an error message
+- name: Local Server Step 2 | Check whether /home/pramati/wmrepotest.zip file exists
+  stat: path={{ local_staging_codezippath }}
+  register: check_path
+  sudo: False
+  tags: wavemaker_production
+#This step removes the code base stored at the location prod_code_zip_path
+#- name: Production Server Step 2 | /home/pramati/wmrepotest.zip  exists
+#  shell: sudo rm -rf {{ prod_code_zip_path }}
+#  when: check_path|success
+#  tags: wavemaker_production
+
+- name: Local Server Step 5 | /home/pramati/wmrepotest.zip not exists
+  debug: msg='wmrepotest.zip not exists in wavemaker_staging/staging/files folder'
+  when: check_path|failed
+  tags: wavemaker_production
+
+
+- name: Local Server Step 5 | /home/pramati/wmrepotest.zip not exists
+  debug: msg='wmrepotest.zip exists in wavemaker_staging/staging/files folder'
+  when: check_path|success
+  tags: wavemaker_productionn
+

@@ -1,0 +1,41 @@
+# staging part 
+# staging part : This playbook installs alll the necessary softwares to the newly created Staging Machine
+# Update all the package lists from the repositories and "updates" them to get information on the newest versions of packages and their dependencies
+
+- name: Staging Step 1 | Update All Package
+  command: apt-get update
+  tags: wavemaker_staging
+  
+# # Installs all the necessary softwares needed too be installed in Staging Machine all with state as present
+- name: Staging Step 2 | Install All needed softwares
+  apt: pkg={{ item }} state=latest
+  with_items:
+      - curl
+      - git
+      - zip
+      - apache2
+      - libapache2-mod-php5
+      - php5-ldap
+      - mysql-server
+      - mysql-client
+      - php5-mysql
+      - python-mysqldb
+      - php5-gd
+  tags: wavemaker_staging
+
+- include: mysql.yml
+
+- include: apache.yml
+
+- include: wordpress.yml
+
+#- name: Staging Step 5 | Removing the default index.html page of the Apache Web Server
+#  shell: sudo rm wordpress_home_path/index.html
+#  tags: wavemaker_staging
+
+
+#- name: Test the installation through URL
+ # uri: url=http://{{ inventory_hostname }}/webapp/amiup status_code=200 timeout=300
+  #register: amiup
+  #failed_when: " 'ok' not in {{ amiup.content }} "
+  #tags: wavemaker_staging

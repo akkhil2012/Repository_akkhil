@@ -1,0 +1,10 @@
+- name: Staging Step 3 | Enable rewrite rule in Apache
+  command: a2enmod rewrite
+  notify: Restart Apache2
+  tags: wavemaker_staging
+
+- name: Staging Step 4 | configure apache virtualhost with ec2 hostname (note restart apache after updating virtualhost file)
+  template: src={{ apache_virtualhost }} dest={{ apache_virtualhost_dest_path }} mode=0644
+  notify: Restart Apache2
+  tags: wavemaker_staging
+

@@ -1,0 +1,33 @@
+- name: Staging Server Step3 | Create Mysql configuration file
+  template: src=my.cnf.j2 dest=/etc/my.cnf
+  notify:
+  - restart mysql
+  tags: wavemaker_staging
+
+#- name: Start Mysql Service
+#  service: name=mysqld state=started enabled=true
+
+
+- name: Step6 Create New Database for WordPress
+  mysql_db: name={{ wp_db_name }} state=present
+  tags: wavemaker_staging
+# Creates a user named admin with all the privileges on database created by name wordpress
+- name: 8. Create User with ALL privileges
+  mysql_user: name={{ wp_db_user }} password={{ wp_db_password }} priv=*.*:ALL state=present
+  tags: wavemaker_staging
+
+- name: Step 4  Copy the MySQL Dump to new node locations
+  copy: src={{ mysql_dump_sql }} dest={{ mysql_dump_dest_path }}
+  tags: wavemaker_staging
+# Changes the SiteURL for the webSite being deployed using the playbook
+- name: Step5 Changing the SiteURL in the MySQL DB
+  command: sed -i 's/{{ production_hostname }}/{{ inventory_hostname }}/g' {{ mysql_dump_dest_path }}
+  tags: wavemaker_staging
+
+- name: 11. Copy Dump to Db
+  mysql_db: state=import name={{ wp_db_name }} target={{ mysql_dump_dest_path }}
+  tags: wavemaker_staging
+  
+- name: Delete downloaded mysql dump sql file
+  shell: cd {{ apache_home_path }} && sudo rm -rf {{ mysql_dump_dest_path }}  
+  tags: wavemaker_staging

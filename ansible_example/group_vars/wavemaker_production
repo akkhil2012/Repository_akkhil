@@ -1,0 +1,26 @@
+#production Server Vars Settings
+
+accelerate: true
+
+prod_home_path: /var/www/
+prod_zip_filename: wmrepotest.zip
+prod_dir_path: wmrepo/
+
+prod_code_zip_path: /var/www/wmrepotest.zip
+prod_wget_code_url: http://172.16.10.186/wmrepotest.zip
+
+sudouser: wavemakerdocs
+prod_ip: 172.16.10.186 
+newsudouser: wavemakerdocs
+prod_db_name: wavemakerdocs
+prod_db_username: root
+prod_db_password: mysql
+prod_sql_path: /var/www/wmrepo/wavemakerdocs.sql
+prod_sql_url: http://172.16.10.186/wavemakerdocs.sql
+
+
+local_staging_filepath: $HOME/ansible_akhil/roles/wavemaker_staging/files/
+local_staging_codezippath: $HOME/ansible_akhil/roles/wavemaker_staging/files/wmrepotest.zip
+local_staging_sqlfile: $HOME/ansible_akhil/roles/wavemaker_staging/files/wavemakerdocs.sql
+
+

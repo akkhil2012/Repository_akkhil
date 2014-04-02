@@ -1,0 +1,29 @@
+---
+# This playbook deploys  Tomcat, Mysql, Terracotta servers on Ubuntu. 
+
+- hosts: wavemaker_production 
+  accelerate: "{{ accelerate }}"
+  gather_facts: false
+  user: wavemakerdocs 
+  sudo: true
+  vars_prompt:
+
+   - name: "Getting Data from Production Machine"
+     prompt: "Getting the Data From Production and migrating to newly launched ec2 Instance"
+     default: "1.0"
+  
+  roles:    
+    - wavemaker_production
+    #- wavemaker_staging
+
+- hosts: wavemaker_staging
+  accelerate: "{{ accelerate }}"
+  gather_facts: false
+  user: wavemakerdocs
+  sudo: true
+
+  roles:
+    #- wavemaker_production
+    - wavemaker_staging
+
+
